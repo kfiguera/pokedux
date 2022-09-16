@@ -4,7 +4,6 @@ import Meta from "antd/es/card/Meta.js";
 import {StarOutlined} from "@ant-design/icons";
 
 const PokemonCard = ({name}) => {
-    console.log(name);
     return (
         <>
             <Card
