@@ -14,9 +14,7 @@ const composedEnhacers = composeAlt(applyMiddleware(thunk,logger));
 const store = createStore(pokemonsReducer,composedEnhacers);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-    <React.StrictMode>
         <Provider store={store}>
             <App/>
         </Provider>
-    </React.StrictMode>
 )
