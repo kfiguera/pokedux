@@ -1,10 +1,10 @@
 import React from 'react';
 import {Card} from "antd";
 import Meta from "antd/es/card/Meta.js";
-import {StarOutlined} from "@ant-design/icons";
 import StarButton from "./StarButton.jsx";
 import {useDispatch} from "react-redux";
-import {setFavorite} from "../actions/index.js";
+import {setFavorite} from "../slices/dataSlice.js";
+
 
 const PokemonCard = ({id, name, image, types, favorite}) => {
     const dispatch = useDispatch();
