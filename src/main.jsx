@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
-import {pokemonsReducer} from "./reducers/pokemons";
+import rootReducer from "./reducers/rootReducer";
 import {Provider} from "react-redux";
 import {applyMiddleware, compose, legacy_createStore as createStore} from "redux";
 import {logger} from "./middleware";
@@ -11,7 +11,7 @@ import './index.css'
 const composeAlt = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const composedEnhacers = composeAlt(applyMiddleware(thunk,logger));
 
-const store = createStore(pokemonsReducer,composedEnhacers);
+const store = createStore(rootReducer,composedEnhacers);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
